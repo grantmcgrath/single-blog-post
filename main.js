@@ -14,3 +14,20 @@ const blogPost = {
 };
 
 // Start Editing Here
+
+const template = `
+  <article>
+    <h2>${blogPost.title}</h2>
+    <div class="meta">
+      <span class-"data">Written on ${blogPost.meta.date}</span>
+    </div>
+    <div class="post">
+      <img src="${blogPost.post.image}">${blogPost.post.content}
+    </div>
+    <div class="site">
+    Part of this content was pulled from <a href="${blogPost.site.url}">${blogPost.site.name}</a>
+    </div>
+  </article>
+`;
+
+document.querySelector(".container").innerHTML = template;
